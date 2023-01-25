@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+    <meta name="viewport" content="user-scalable=0" >
+  <title>TEN3 Maths</title>
+
+  <link rel="icon" type="image/x-icon" href="./assets/TEN3Icon.png">
+
+
+  <link href="main.css" type="text/css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <ul id="navbar">
+    <li><button type="button" class="navElement" id="homeButton">
+      <img id="homeButtonImg" src="assets/home.svg">
+    </button></li>
+    <span id="navFiller" class="filler"></span>
+
+    <div id="navbarGradeLevel">Grade 1</div>
+
+    <li><button type="button" class="navElement" id="changeOperationButton">
+      <img id="operationsIcon" src="assets/operations_icon.svg">
+    </button></li>
+  </ul>
+
+  <div id="trackBox">
+    <span class="filler"></span>
+    <div class="trackIcon"></div>
+    <div class="trackIcon"></div>
+    <div class="trackIcon"></div>
+    <div class="trackIcon"></div>
+    <div class="trackIcon"></div>
+    <div class="trackIcon"></div>
+    <div class="trackIcon"></div>
+    <div class="trackIcon"></div>
+    <div class="trackIcon"></div>
+    <div class="trackIcon"></div>
+  </div>
+
+  <div id="problemBox">
+    <p id="equation"></p>
+    <br>
+    <p id="userAnswer"></p>
+  </div>
+
+  <div id="numpadBox">
+    <div id="numpad">
+      <button class="numpad" onclick="inputController(this)">1</button>
+      <button class="numpad" onclick="inputController(this)">2</button>
+      <button class="numpad" onclick="inputController(this)">3</button>
+      <button class="numpad" onclick="inputController(this)">4</button>
+      <button class="numpad" onclick="inputController(this)">5</button>
+      <button class="numpad" onclick="inputController(this)">6</button>
+      <button class="numpad" onclick="inputController(this)">7</button>
+      <button class="numpad" onclick="inputController(this)">8</button>
+      <button class="numpad" onclick="inputController(this)">9</button>
+      <button class="numpad" onclick="inputController(this)">0</button>
+      <button class="numpad wideButton" onclick="inputController(this)" id="negateButton">(–)</button>
+      <button class="numpad wideButton" onclick="clearScreen()" id="clearButton"><span class="filler"></span><img src="./assets/trash.svg"></button>
+      <button class="numpad wideButton" onclick="removeLastChar()" id="backspaceButton"><span class="filler"></span><img src="./assets/backspace.svg"></button>
+    </div>
+  </div>
+  
+  <button id="checkAnswer" class="bubbleButton" disabled>Check</button>
+
+  <div id="feedbackWrong" class="hidden">
+    <div class="whiteout"></div>
+
+    <div class="feedbackBox">
+      <div class="feedbackTop"></div>
+
+      <h1 class="feedbackMainIcon"><img src="./assets/wrong.svg"></h1>
+
+      <h3 class="feedbackHeader">That's not correct.</h3>
+      <h3 class="feedbackText">Try again?</h3>
+
+      <ul class="feedbackOptions">
+        <li><button type="button" class="feedbackIcon" id="redoButton">
+            <img id="redoArrow" src="assets/redo_arrow.svg">
+          </button></li>
+
+        <li><button type="button" class="feedbackIcon upsideDown" id="skipButton">
+            <img id="skipArrow" src="assets/skip_icon_white.svg">
+          </button></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div id="feedbackRight" class="hidden">
+    <div class="whiteout"></div>
+
+    <div class="feedbackBox">
+      <div class="feedbackTop"></div>
+
+      <h1 class="feedbackMainIcon"><img src="./assets/check.svg"></h1>
+
+      <h3 class="feedbackHeader" id="feedbackHeaderRight">That's right!</h3>
+      <h3 class="feedbackText" id="feedbackTextRight">Next problem:</h3>
+
+      <ul class="feedbackOptionOnlyNext">
+        <li><button type="button" class="feedbackIcon flipped" id="nextButton">
+            <img id="nextArrow" src="assets/back_arrow.svg">
+          </button></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="playgame.js"></script>
+</body>
+</html>

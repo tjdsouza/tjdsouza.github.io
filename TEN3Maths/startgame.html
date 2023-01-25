@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=0" >
+    
+    <title>TEN3 Maths</title>
+
+    <link rel="icon" type="image/x-icon" href="./assets/TEN3Icon.png">
+
+
+    <link href="main.css" type="text/css" rel="stylesheet">
+
+
+  </head>
+
+
+
+  <body>
+
+
+  <ul id="navbar">
+    <li><button type="button" class="navElement" id="backArrow">
+      <img id="backArrowImg" src="assets/back_arrow.svg">
+    </button></li>
+    <span id="navFiller" class="filler"></span>
+
+    <li id="navbarGradeLevel">Grade 1</li>
+  </ul>
+
+
+
+
+  <div id="greyout"></div>
+
+  <div id="selectOperationBoxTwo">
+      <div class="selectMathTitle">
+        <h3>Select Arithmetic Type</h3>
+      </div>
+
+      <div class="operationOptions">
+        <button id="additionButtonTwo" class="operationSymbol ">+</button>
+        <button id="subtractionButtonTwo" class="rightOperations operationSymbol">–</button>
+      </div>
+  </div>
+
+  <button id="startButtonTwo" type="button" class="startButton bubbleButton" onclick="loadGame()" disabled>Start</button>
+
+
+
+  <div id="selectOperationBoxFour">
+      <div class="selectMathTitle">
+        <h3>Select Arithmetic Type</h3>
+      </div>
+
+      <div class="operationOptions">
+        <button id="additionButtonFour" class="operationSymbol">+</button>
+        <button id="subtractionButtonFour" class="rightOperations operationSymbol">–</button>
+        <button id="multiplicationButtonFour" class="operationSymbol">×</button>
+        <button id="divisionButtonFour" class="rightOperations operationSymbol">÷</button>
+      </div>
+  </div>
+
+  <button id="startButtonFour" type="button" class="startButton bubbleButton" onclick="loadGame()" disabled>Start</button>
+
+
+  <script src="startgame.js"></script>
+
+</body>
+
+
+</html>
